@@ -1,0 +1,38 @@
+name: "Add LLM Failure Case"
+description: "Submit a failure case for the dataset."
+title: "Failure Case: [Short Description]"
+labels: ["data-submission"]
+
+body:
+  - type: textarea
+    id: query
+    attributes:
+      label: "Query"
+      description: "The input query you gave to the LLM."
+      placeholder: "E.g., Translate 'apple' to French."
+    validations:
+      required: true
+  - type: textarea
+    id: model_response
+    attributes:
+      label: "Model Response"
+      description: "The incorrect or bad response from the LLM."
+      placeholder: "E.g., Banane"
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: "Model Name"
+      description: "The name of the LLM (e.g., GPT-4, Claude, etc.)."
+      placeholder: "E.g., GPT-4"
+    validations:
+      required: true
+  - type: textarea
+    id: user_response
+    attributes:
+      label: "Correct Response"
+      description: "Your own correct or expected response."
+      placeholder: "E.g., Pomme"
+    validations:
+      required: true
